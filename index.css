@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: "Press Start 2P", monospace;
+  line-height: 1.6;
+  font-weight: 400;
+  color: #ffffff;
+  background-color: #1a1a2e;
+}
+
+* {
+  box-sizing: border-box;
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #1a1a2e;
+}
+
+@layer utilities {
+  .font-pixel {
+    font-family: "Press Start 2P", monospace;
+    font-size: 10px;
+    line-height: 1.6;
+  }
+
+  .pixel-shadow {
+    box-shadow: 4px 4px 0px 0px #0f3460;
+  }
+
+  .pixel-text {
+    text-shadow: 2px 2px 0px #0f3460;
+    letter-spacing: 1px;
+  }
+
+  .pixel-button {
+    box-shadow: 2px 2px 0px 0px rgba(0, 0, 0, 0.3);
+    transition: all 0.1s;
+  }
+
+  .pixel-button:active {
+    transform: translate(2px, 2px);
+    box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.3);
+  }
+
+  .pixel-input {
+    box-shadow: inset 2px 2px 0px 0px rgba(0, 0, 0, 0.3);
+  }
+
+  .pixel-checkbox {
+    appearance: none;
+    -webkit-appearance: none;
+    cursor: pointer;
+    position: relative;
+  }
+
+  .pixel-checkbox:checked {
+    background-color: #e94560;
+  }
+
+  .pixel-checkbox:checked::after {
+    content: "✓";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+  }
+
+  .pixel-bg {
+    background-image: 
+      repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 2px,
+        rgba(15, 52, 96, 0.1) 2px,
+        rgba(15, 52, 96, 0.1) 4px
+      ),
+      repeating-linear-gradient(
+        90deg,
+        transparent,
+        transparent 2px,
+        rgba(15, 52, 96, 0.1) 2px,
+        rgba(15, 52, 96, 0.1) 4px
+      );
+  }
+}
+
+
+
+
+
+
+
+
